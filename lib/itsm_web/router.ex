@@ -18,6 +18,9 @@ defmodule ItsmWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    live "/sample/one", SampleLive.One
+    live "/sample/two", SampleLive.Two
+    live "/sample/three", SampleLive.Three
   end
 
   # Other scopes may use custom stacks.
