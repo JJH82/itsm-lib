@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원 정보 수정</title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="app.css" rel="stylesheet" />
+  </head>
+  <body class="bg-kb-light-gray py-12 px-4">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-8">
+        <h1 class="text-title-h1">회원 정보 수정</h1>
+        <p class="text-caption mt-2">회원님의 정보를 안전하게 관리해주세요.</p>
+      </div>
+
+      <form action="#" method="POST" class="space-y-8">
+        <div class="card-base">
+          <h2 class="text-title-h2 border-b border-kb-border-gray pb-4">기본 정보</h2>
+
+          <div class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-6">
+            <div>
+              <label for="user-id" class="form-label">아이디</label>
+              <input
+                type="text"
+                id="user-id"
+                value="kbstar_user"
+                class="form-input bg-gray-100"
+                disabled
+              />
+              <p class="text-caption mt-1">아이디는 변경할 수 없습니다.</p>
+            </div>
+
+            <div>
+              <label for="user-name" class="form-label">이름</label>
+              <input type="text" id="user-name" value="김국민" class="form-input" />
+            </div>
+
+            <div class="sm:col-span-2">
+              <label for="email" class="form-label">이메일</label>
+              <div class="flex gap-3">
+                <input type="email" id="email" value="kbs**@kbstar.com" class="form-input" />
+                <button type="button" class="btn-secondary flex-shrink-0">변경</button>
+              </div>
+            </div>
+
+            <div class="sm:col-span-2">
+              <label for="phone" class="form-label">휴대전화</label>
+              <div class="flex gap-3">
+                <input type="tel" id="phone" value="010-****-1234" class="form-input" />
+                <button type="button" class="btn-secondary flex-shrink-0">인증</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-base">
+          <h2 class="text-title-h2 border-b border-kb-border-gray pb-4">추가 정보</h2>
+
+          <div class="mt-6 grid grid-cols-1 gap-y-6">
+            <div>
+              <label class="form-label">관심 상품 (중복 선택 가능)</label>
+              <div class="mt-2 grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div class="form-control-group">
+                  <input id="interest-deposit" type="checkbox" class="form-checkbox" checked />
+                  <label for="interest-deposit" class="text-sm">예금</label>
+                </div>
+                <div class="form-control-group">
+                  <input id="interest-fund" type="checkbox" class="form-checkbox" checked />
+                  <label for="interest-fund" class="text-sm">펀드</label>
+                </div>
+                <div class="form-control-group">
+                  <input id="interest-loan" type="checkbox" class="form-checkbox" />
+                  <label for="interest-loan" class="text-sm">대출</label>
+                </div>
+                <div class="form-control-group">
+                  <input id="interest-card" type="checkbox" class="form-checkbox" />
+                  <label for="interest-card" class="text-sm">카드</label>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <label class="form-label">마케팅 정보 수신 동의</label>
+              <div class="mt-2 flex gap-6">
+                <div class="form-control-group">
+                  <input id="agree-sms" type="radio" name="marketing-agree" class="form-radio" />
+                  <label for="agree-sms" class="text-sm">동의</label>
+                </div>
+                <div class="form-control-group">
+                  <input
+                    id="disagree-sms"
+                    type="radio"
+                    name="marketing-agree"
+                    class="form-radio"
+                    checked
+                  />
+                  <label for="disagree-sms" class="text-sm">미동의</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-end gap-3">
+          <button type="button" class="btn-secondary">취소</button>
+          <button type="submit" class="btn-primary">정보 수정</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

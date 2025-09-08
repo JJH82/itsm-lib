@@ -21,6 +21,8 @@ defmodule ItsmWeb.Router do
     live "/sample/one", SampleLive.One
     live "/sample/two", SampleLive.Two
     live "/sample/three", SampleLive.Three
+    live "/sample/four", SampleLive.Four
+    live "/sample/five", SampleLive.Five
   end
 
   # Other scopes may use custom stacks.
