@@ -37,6 +37,15 @@
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
     }
+
+     /* ✅ Ring 색상 (이 부분을 추가) */
+    .ring-kb-yellow {
+        --tw-ring-color: #FFCC00;
+    }
+    .ring-kb-blue {
+        --tw-ring-color: #0067AC;
+    }
+
 }
 
 /* ==========================================================================
@@ -186,7 +195,9 @@
     .card-interactive:hover {
         @apply border-kb-yellow;
     }
-
+    .focus\:ring-kb-yellow:focus {
+    --tw-ring-color: #FFCC00;
+    }
     /* ----------------------------------
        Forms & Inputs
        ---------------------------------- */
